@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>  
+   <meta charset=utf-8 />  
+   <title>Anita Ifeadi: Support For The Financially Marginalized</title>  
+   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />  <!-- Adjusts the screen width to the device accessing the web map -->
+   <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script> <!-- Sets up Mapbox GL JS -->
+   <link href="https://api.mapbox.com/mapsbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" /> <!-- Sets up Mapbox GL JS -->
+   <!-- below - in file CSS browser set up -->
+   <style>
+      body { margin:0; padding:0; }   
+      .map { position:absolute; top:0; bottom:0; width:100%; }  
+      .mapboxgl-popup {
+         color: white;
+      }
+
+      .legend {
+         background-color: #ffffff;
+         border-radius: 3px;
+         bottom: 30px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         font-family: 'Open Sans', sans-serif;
+         font-size: 0.8rem;
+         padding: 20px;
+         position: absolute;
+         right: 10px;
+         z-index: 1;
+      }
+
+      .legend h4 {
+         margin: 0 0 10px
+      }
+
+      .legend h3 {
+         margin: 0 0 10px;
+         font-size: 0.7rem;
+      }
+
+      .legend div span {
+         border-radius: 50%;
+         display: inline-block;
+         height: 20px;
+         margin-right: 5px;
+         width: 20px;
+      }
+
+      .legend hr {
+         border-style: solid none none;
+         width: 60%;
+         border-width: 2px;
+         border-color: #d0d2ca;
+         margin: 8px 8px 10px;
+   </style>
+</head>
+<body>  <!-- where we put our javascript code -->
+ <div id='map' class='map'> </div> <!-- browser set up -->
+   <div>
+      <!--Legend to be inserted here-->
+   </div>
+   <div id="legend" class="legend">
+      <h4>Median Income 2016, Toronto.</h4>
+      <h3>Census Canada</h3>
+      <div><span style="background-color: #ede5cf;border-radius: 0%;"></span>$0 - $56,640</div>
+      <div><span style="background-color: #e0c2a2;border-radius: 0%;"></span>$56,640 - $79,616</div>
+      <div><span style="background-color: #d39c83;border-radius: 0%;"></span>$79,616 - $115,456</div>
+      <div><span style="background-color: #c1766f;border-radius: 0%;"></span>$115,456 - $184,661</div>
+      <div><span style="background-color: #813753;border-radius: 0%;"></span>Above $184,661</div>
+      <hr>
+      <h4>Points</h4>
+      <div><span style="background-color: #68abb8;"></span>Legal Justice Support</div>
+      <div><span style="background-color: #5c53a5;"></span>Housing Eviction Help</div>
+   </div>
+   <script src='./anitaifeadilab3.js'></script> <!-- "./" means current directory, so if you put your code elsewhere use that path -->
+</body>
+</html>
